@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  content: 1.5
+  category: 
+  price: 1.5
+  brand: MyString
+  selling_price: 1.5
+
+two:
+  name: MyString
+  content: 1.5
+  category: 
+  price: 1.5
+  brand: MyString
+  selling_price: 1.5
