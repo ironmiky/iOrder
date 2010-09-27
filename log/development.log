@@ -199,3 +199,93 @@ ActiveRecord::AssociationTypeMismatch (Pr(#82878820) expected, got String(#79232
 Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
 Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
 Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started GET "/tables/new" for 127.0.0.1 at 2010-09-27 14:41:38 +0200
+  Processing by TablesController#new as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mPr Load (0.8ms)[0m  SELECT `prs`.* FROM `prs`
+Rendered tables/_form.html.erb (171.1ms)
+Rendered tables/new.html.erb within layouts/application (175.5ms)
+Completed 200 OK in 211ms (Views: 180.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/tables" for 127.0.0.1 at 2010-09-27 14:41:50 +0200
+  Processing by TablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "table"=>{"number"=>"1", "name"=>"Piergentili", "people"=>"", "free"=>"", "price"=>"", "pr_id"=>"1", "note"=>""}, "commit"=>"Create Table"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  describe `tables`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `tables` (`created_at`, `free`, `name`, `note`, `number`, `people`, `pr_id`, `price`, `updated_at`) VALUES ('2010-09-27 12:41:50', NULL, 'Piergentili', '', 1, NULL, 1, NULL, '2010-09-27 12:41:50')[0m
+  [1m[35mSQL (35.9ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/tables/1
+Completed 302 Found in 123ms
+
+
+Started GET "/tables/1" for 127.0.0.1 at 2010-09-27 14:41:50 +0200
+  Processing by TablesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT `tables`.* FROM `tables` WHERE (`tables`.`id` = 1) LIMIT 1[0m
+  [1m[35mPr Load (0.3ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1
+Rendered tables/show.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 64ms (Views: 46.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/1" for 127.0.0.1 at 2010-09-27 14:42:28 +0200
+  Processing by TablesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT `tables`.* FROM `tables` WHERE (`tables`.`id` = 1) LIMIT 1[0m
+  [1m[35mPr Load (0.3ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1
+Rendered tables/show.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 75ms (Views: 52.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 127.0.0.1 at 2010-09-27 15:11:24 +0200
+  Processing by TablesController#index as HTML
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  [1m[35mPr Load (0.3ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1
+Rendered tables/index.html.erb within layouts/application (45.0ms)
+Completed 200 OK in 64ms (Views: 49.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables" for 127.0.0.1 at 2010-09-27 15:11:48 +0200
+  Processing by TablesController#index as HTML
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  [1m[35mPr Load (0.2ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1
+Rendered tables/index.html.erb within layouts/application (73.4ms)
+Completed 200 OK in 91ms (Views: 78.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/new" for 127.0.0.1 at 2010-09-27 15:12:47 +0200
+  Processing by TablesController#new as HTML
+  [1m[36mPr Load (0.3ms)[0m  [1mSELECT `prs`.* FROM `prs`[0m
+Rendered tables/_form.html.erb (77.9ms)
+Rendered tables/new.html.erb within layouts/application (82.1ms)
+Completed 200 OK in 100ms (Views: 86.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tables" for 127.0.0.1 at 2010-09-27 15:12:59 +0200
+  Processing by TablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "table"=>{"number"=>"5", "name"=>"Alfani", "people"=>"", "free"=>"", "price"=>"", "pr_id"=>"2", "note"=>""}, "commit"=>"Create Table"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `tables` (`created_at`, `free`, `name`, `note`, `number`, `people`, `pr_id`, `price`, `updated_at`) VALUES ('2010-09-27 13:12:59', NULL, 'Alfani', '', 5, NULL, 2, NULL, '2010-09-27 13:12:59')[0m
+  [1m[35mSQL (31.4ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/tables/2
+Completed 302 Found in 64ms
+
+
+Started GET "/tables/2" for 127.0.0.1 at 2010-09-27 15:12:59 +0200
+  Processing by TablesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT `tables`.* FROM `tables` WHERE (`tables`.`id` = 2) LIMIT 1[0m
+  [1m[35mPr Load (0.4ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1
+Rendered tables/show.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 99ms (Views: 51.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tables" for 127.0.0.1 at 2010-09-27 15:13:02 +0200
+  Processing by TablesController#index as HTML
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  [1m[35mPr Load (0.3ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1
+  [1m[36mPr Load (0.3ms)[0m  [1mSELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1[0m
+Rendered tables/index.html.erb within layouts/application (73.9ms)
+Completed 200 OK in 92ms (Views: 78.0ms | ActiveRecord: 0.9ms)

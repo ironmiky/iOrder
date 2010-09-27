@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :pr %><br />
-    <%= f.text_field :pr %>
+    <%= collection_select(:table, :pr_id, Pr.all , :id, :name, {:prompt => true})  %>
   </div>
   <div class="field">
     <%= f.label :note %><br />
