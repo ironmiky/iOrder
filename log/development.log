@@ -322,3 +322,709 @@ Migrating to CreateOrderedProducts (20100927151216)
   [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `prs`[0m
   [1m[35mSQL (1.2ms)[0m  describe `tables`
   [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `tables`[0m
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2010-09-27 17:21:21 +0200
+  Processing by Rails::InfoController#properties as HTML
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Rendered inline template (0.6ms)
+Completed 200 OK in 146ms (Views: 3.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2010-09-27 17:21:26 +0200
+  Processing by Rails::InfoController#properties as HTML
+Rendered inline template (0.6ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2010-09-27 17:21:28 +0200
+  Processing by Rails::InfoController#properties as HTML
+Rendered inline template (0.5ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2010-09-27 17:21:29 +0200
+  Processing by Rails::InfoController#properties as HTML
+Rendered inline template (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products/" for 127.0.0.1 at 2010-09-27 17:21:36 +0200
+  Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT `products`.* FROM `products`
+Rendered products/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 254ms (Views: 31.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2010-09-27 17:21:38 +0200
+  Processing by ProductsController#new as HTML
+Rendered products/_form.html.erb (90.3ms)
+Rendered products/new.html.erb within layouts/application (96.5ms)
+Completed 200 OK in 118ms (Views: 102.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/" for 127.0.0.1 at 2010-09-27 17:21:48 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 29ms (Views: 11.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2010-09-27 17:21:51 +0200
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (8.2ms)
+Rendered categories/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 70ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2010-09-27 17:21:56 +0200
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "category"=>{"name"=>"Vodka"}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `categories`[0m
+  [1m[35mSQL (11.2ms)[0m  INSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2010-09-27 15:21:56', 'Vodka', '2010-09-27 15:21:56')
+  [1m[36mSQL (25.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/categories/1
+Completed 302 Found in 124ms
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2010-09-27 17:21:57 +0200
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (26.9ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 1) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 77ms (Views: 26.9ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:21:59 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 63ms (Views: 16.2ms | ActiveRecord: 38.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2010-09-27 17:22:01 +0200
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (7.6ms)
+Rendered categories/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 34ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2010-09-27 17:22:05 +0200
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "category"=>{"name"=>"Rum"}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2010-09-27 15:22:05', 'Rum', '2010-09-27 15:22:05')[0m
+  [1m[35mSQL (58.7ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/categories/2
+Completed 302 Found in 92ms
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2010-09-27 17:22:05 +0200
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 33ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:22:07 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 33ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2010-09-27 17:22:08 +0200
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (7.2ms)
+Rendered categories/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 31ms (Views: 17.7ms | ActiveRecord: 59.1ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2010-09-27 17:22:12 +0200
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "category"=>{"name"=>"Gin"}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2010-09-27 15:22:12', 'Gin', '2010-09-27 15:22:12')
+  [1m[36mSQL (26.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/categories/3
+Completed 302 Found in 92ms
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2010-09-27 17:22:12 +0200
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 3) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 32ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:22:14 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 65ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2010-09-27 17:22:17 +0200
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (7.9ms)
+Rendered categories/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 31ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2010-09-27 17:22:21 +0200
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "category"=>{"name"=>"Whisky"}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2010-09-27 15:22:21', 'Whisky', '2010-09-27 15:22:21')[0m
+  [1m[35mSQL (33.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/categories/4
+Completed 302 Found in 61ms
+
+
+Started GET "/categories/4" for 127.0.0.1 at 2010-09-27 17:22:21 +0200
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 4) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 67ms (Views: 15.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:22:24 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 43ms (Views: 29.1ms | ActiveRecord: 26.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:22:24 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 40ms (Views: 23.2ms | ActiveRecord: 33.8ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2010-09-27 17:22:30 +0200
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (7.2ms)
+Rendered categories/new.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 63ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2010-09-27 17:22:36 +0200
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "category"=>{"name"=>"Vermouth"}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2010-09-27 15:22:36', 'Vermouth', '2010-09-27 15:22:36')[0m
+  [1m[35mSQL (50.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/categories/5
+Completed 302 Found in 81ms
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2010-09-27 17:22:36 +0200
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 5) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 39ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:22:38 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 77ms (Views: 55.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2010-09-27 17:22:41 +0200
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (6.9ms)
+Rendered categories/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 31ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2010-09-27 17:23:01 +0200
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "category"=>{"name"=>"Spumante"}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2010-09-27 15:23:01', 'Spumante', '2010-09-27 15:23:01')
+  [1m[36mSQL (53.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/categories/6
+Completed 302 Found in 84ms
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2010-09-27 17:23:01 +0200
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 6) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 31ms (Views: 15.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:23:03 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 46ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2010-09-27 17:23:04 +0200
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (7.8ms)
+Rendered categories/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 36ms (Views: 17.4ms | ActiveRecord: 54.2ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2010-09-27 17:23:09 +0200
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "category"=>{"name"=>"Champagne"}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2010-09-27 15:23:09', 'Champagne', '2010-09-27 15:23:09')[0m
+  [1m[35mSQL (36.1ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/categories/7
+Completed 302 Found in 98ms
+
+
+Started GET "/categories/7" for 127.0.0.1 at 2010-09-27 17:23:10 +0200
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 7) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 32ms (Views: 14.8ms | ActiveRecord: 50.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:23:12 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 38ms (Views: 22.4ms | ActiveRecord: 37.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2010-09-27 17:23:14 +0200
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (40.9ms)
+Rendered categories/new.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 64ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2010-09-27 17:23:20 +0200
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "category"=>{"name"=>"Analcolico"}, "commit"=>"Create Category"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2010-09-27 15:23:20', 'Analcolico', '2010-09-27 15:23:20')
+  [1m[36mSQL (62.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/categories/8
+Completed 302 Found in 89ms
+
+
+Started GET "/categories/8" for 127.0.0.1 at 2010-09-27 17:23:20 +0200
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 8) LIMIT 1
+Rendered categories/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 71ms (Views: 14.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:23:22 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT `categories`.* FROM `categories`[0m
+Rendered categories/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 46ms (Views: 28.1ms | ActiveRecord: 63.1ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2010-09-27 17:23:24 +0200
+  Processing by CategoriesController#new as HTML
+Rendered categories/_form.html.erb (7.9ms)
+Rendered categories/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 31ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2010-09-27 17:23:28 +0200
+  Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "category"=>{"name"=>"Materiali"}, "commit"=>"Create Category"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `categories` (`created_at`, `name`, `updated_at`) VALUES ('2010-09-27 15:23:29', 'Materiali', '2010-09-27 15:23:29')[0m
+  [1m[35mSQL (61.3ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/categories/9
+Completed 302 Found in 87ms
+
+
+Started GET "/categories/9" for 127.0.0.1 at 2010-09-27 17:23:29 +0200
+  Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 9) LIMIT 1[0m
+Rendered categories/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 34ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2010-09-27 17:23:30 +0200
+  Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered categories/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 43ms (Views: 26.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2010-09-27 17:25:38 +0200
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+Rendered products/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 27ms (Views: 8.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2010-09-27 17:25:41 +0200
+  Processing by ProductsController#new as HTML
+  [1m[35mCategory Load (0.4ms)[0m  SELECT `categories`.* FROM `categories`
+Rendered products/_form.html.erb (73.6ms)
+Rendered products/new.html.erb within layouts/application (78.7ms)
+Completed 200 OK in 103ms (Views: 84.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/products" for 127.0.0.1 at 2010-09-27 17:26:11 +0200
+  Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "product"=>{"name"=>"Bacardi Riserva", "content"=>"0.7", "category_id"=>"2", "price"=>"6.50", "brand"=>"Bacardi", "selling_price"=>"120.00"}, "commit"=>"Create Product"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  describe `products`
+  [1m[36mSQL (76.6ms)[0m  [1mINSERT INTO `products` (`brand`, `category_id`, `content`, `created_at`, `name`, `price`, `selling_price`, `updated_at`) VALUES ('Bacardi', 2, 0.7, '2010-09-27 15:26:12', 'Bacardi Riserva', 6.5, 120.0, '2010-09-27 15:26:12')[0m
+  [1m[35mSQL (211.8ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/products/1
+Completed 302 Found in 379ms
+
+
+Started GET "/products/1" for 127.0.0.1 at 2010-09-27 17:26:12 +0200
+  Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (16.7ms)[0m  [1mSELECT `products`.* FROM `products` WHERE (`products`.`id` = 1) LIMIT 1[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+Rendered products/show.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 81ms (Views: 45.4ms | ActiveRecord: 306.5ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2010-09-27 17:26:21 +0200
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  [1m[35mCategory Load (0.3ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+Rendered products/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 63ms (Views: 46.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2010-09-27 17:26:52 +0200
+  Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT `categories`.* FROM `categories` WHERE (`categories`.`id` = 2) LIMIT 1
+Rendered products/index.html.erb within layouts/application (39.9ms)
+Completed 200 OK in 62ms (Views: 46.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tables/" for 127.0.0.1 at 2010-09-27 17:27:26 +0200
+  Processing by TablesController#index as HTML
+  [1m[36mTable Load (0.5ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  [1m[35mPr Load (0.3ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1
+  [1m[36mPr Load (0.3ms)[0m  [1mSELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1[0m
+Rendered tables/index.html.erb within layouts/application (104.6ms)
+Completed 200 OK in 140ms (Views: 120.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/orderedproducts" for 127.0.0.1 at 2010-09-27 17:27:42 +0200
+
+ActionController::RoutingError (No route matches "/orderedproducts"):
+  
+
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/ordered_products" for 127.0.0.1 at 2010-09-27 17:27:49 +0200
+
+ActionController::RoutingError (No route matches "/ordered_products"):
+  
+
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/tables/" for 127.0.0.1 at 2010-09-27 18:06:42 +0200
+  Processing by TablesController#index as HTML
+  [1m[35mTable Load (11.9ms)[0m  SELECT `tables`.* FROM `tables`
+  [1m[36mPr Load (87.6ms)[0m  [1mSELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1[0m
+  [1m[35mPr Load (12.5ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1
+Rendered tables/index.html.erb within layouts/application (223.7ms)
+Completed 200 OK in 270ms (Views: 142.1ms | ActiveRecord: 112.0ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:06:48 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[36mOrder Load (38.7ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+Rendered orders/index.html.erb within layouts/application (48.8ms)
+Completed 200 OK in 161ms (Views: 76.7ms | ActiveRecord: 38.7ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2010-09-27 18:06:53 +0200
+  Processing by OrdersController#new as HTML
+Rendered orders/_form.html.erb (14.4ms)
+Rendered orders/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 67ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:08:35 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders`
+Rendered orders/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 27ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2010-09-27 18:08:38 +0200
+  Processing by OrdersController#new as HTML
+Rendered orders/_form.html.erb (59.3ms)
+Rendered orders/new.html.erb within layouts/application (61.1ms)
+Completed   in 118ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= form_for([@order, @table]) do |f| %>
+    2:   <% if @order.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+  app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb___675535428_82704720_771227514'
+  app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___381551253_82722430_681395775'
+  app/controllers/orders_controller.rb:29:in `new'
+
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.8ms)
+
+
+Started GET "/tables/" for 127.0.0.1 at 2010-09-27 18:08:52 +0200
+  Processing by TablesController#index as HTML
+  [1m[36mTable Load (0.3ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  [1m[35mPr Load (0.4ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1
+  [1m[36mPr Load (0.4ms)[0m  [1mSELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1[0m
+Rendered tables/index.html.erb within layouts/application (82.2ms)
+Completed 200 OK in 110ms (Views: 86.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tables/" for 127.0.0.1 at 2010-09-27 18:11:15 +0200
+  Processing by TablesController#index as HTML
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables`
+  [1m[36mPr Load (0.3ms)[0m  [1mSELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1[0m
+  [1m[35mPr Load (0.4ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1
+Rendered tables/index.html.erb within layouts/application (89.4ms)
+Completed 200 OK in 114ms (Views: 93.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:11:17 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+Rendered orders/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 32ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2010-09-27 18:11:22 +0200
+  Processing by OrdersController#new as HTML
+Completed   in 20ms
+
+ActiveRecord::RecordNotFound (Couldn't find Table without an ID):
+  app/controllers/orders_controller.rb:27:in `new'
+
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.9ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.1ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:12:05 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[35mOrder Load (0.5ms)[0m  SELECT `orders`.* FROM `orders`
+Rendered orders/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 27ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:12:41 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+Rendered orders/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 25ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tables/1/orders/new" for 127.0.0.1 at 2010-09-27 18:12:45 +0200
+  Processing by OrdersController#new as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[35mTable Load (0.3ms)[0m  SELECT `tables`.* FROM `tables` WHERE (`tables`.`id` = 1) LIMIT 1
+Rendered orders/_form.html.erb (11.3ms)
+Rendered orders/new.html.erb within layouts/application (13.3ms)
+Completed   in 65ms
+
+ActionView::Template::Error (undefined method `order_table_path' for #<#<Class:0x95c8470>:0x95ad864>):
+    1: <%= form_for([@order, @table]) do |f| %>
+    2:   <% if @order.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+  app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb___675535428_78374060_771227514'
+  app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___381551253_78466910_681395775'
+
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/tables/1/orders/new" for 127.0.0.1 at 2010-09-27 18:13:59 +0200
+  Processing by OrdersController#new as HTML
+  Parameters: {"table_id"=>"1"}
+Rendered orders/_form.html.erb (10.1ms)
+Rendered orders/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 36ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tables/" for 127.0.0.1 at 2010-09-27 18:14:03 +0200
+  Processing by TablesController#index as HTML
+  [1m[36mTable Load (0.4ms)[0m  [1mSELECT `tables`.* FROM `tables`[0m
+  [1m[35mPr Load (0.3ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1
+  [1m[36mPr Load (0.4ms)[0m  [1mSELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1[0m
+Rendered tables/index.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 73ms (Views: 53.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:14:05 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[35mOrder Load (0.5ms)[0m  SELECT `orders`.* FROM `orders`
+Rendered orders/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tables/1/orders/new" for 127.0.0.1 at 2010-09-27 18:14:07 +0200
+  Processing by OrdersController#new as HTML
+  Parameters: {"table_id"=>"1"}
+Rendered orders/_form.html.erb (14.3ms)
+Rendered orders/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 75ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2010-09-27 18:14:23 +0200
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "order"=>{"order_number"=>"", "table"=>""}, "commit"=>"Create Order"}
+Completed   in 83ms
+
+ActiveRecord::AssociationTypeMismatch (Table(#74939340) expected, got String(#73864650)):
+  app/controllers/orders_controller.rb:43:in `new'
+  app/controllers/orders_controller.rb:43:in `create'
+
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:14:55 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+Rendered orders/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 27ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tables/1/orders/new" for 127.0.0.1 at 2010-09-27 18:14:56 +0200
+  Processing by OrdersController#new as HTML
+  Parameters: {"table_id"=>"1"}
+Rendered orders/_form.html.erb (7.6ms)
+Rendered orders/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 30ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2010-09-27 18:14:58 +0200
+  Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lgjl0Rd5hg89m8tNGx8zK4Rmgp32jfDMofyFVOk92yY=", "order"=>{"order_number"=>""}, "commit"=>"Create Order"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (42.0ms)[0m  [1mdescribe `orders`[0m
+  [1m[35mSQL (18.8ms)[0m  INSERT INTO `orders` (`created_at`, `order_number`, `table_id`, `updated_at`) VALUES ('2010-09-27 16:14:58', NULL, NULL, '2010-09-27 16:14:58')
+  [1m[36mSQL (44.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/orders/1
+Completed 302 Found in 171ms
+
+
+Started GET "/orders/1" for 127.0.0.1 at 2010-09-27 18:14:58 +0200
+  Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mOrder Load (1.0ms)[0m  SELECT `orders`.* FROM `orders` WHERE (`orders`.`id` = 1) LIMIT 1
+Rendered orders/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 35ms (Views: 15.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2010-09-27 18:15:01 +0200
+  Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+Rendered orders/index.html.erb within layouts/application (10.1ms)
+Completed   in 30ms
+
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"orders"}):
+    22: 
+    23: <br />
+    24: 
+    25: <%= link_to 'New Order', new_table_order_path %>
+  app/views/orders/index.html.erb:25:in `_app_views_orders_index_html_erb___975112146_81838230_681395775'
+  app/controllers/orders_controller.rb:7:in `index'
+
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /home/tux/.rvm/gems/ruby-1.9.2-p0/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/tables" for 127.0.0.1 at 2010-09-27 18:15:11 +0200
+  Processing by TablesController#index as HTML
+  [1m[35mTable Load (0.5ms)[0m  SELECT `tables`.* FROM `tables`
+  [1m[36mPr Load (0.3ms)[0m  [1mSELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1[0m
+  [1m[35mPr Load (0.3ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1
+Rendered tables/index.html.erb within layouts/application (48.1ms)
+Completed 200 OK in 71ms (Views: 53.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:15:13 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+Rendered orders/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 40ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:15:47 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[35mOrder Load (0.4ms)[0m  SELECT `orders`.* FROM `orders`
+Rendered orders/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 89ms (Views: 25.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:15:49 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+Rendered orders/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 34ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tables" for 127.0.0.1 at 2010-09-27 18:16:18 +0200
+  Processing by TablesController#index as HTML
+  [1m[35mTable Load (0.4ms)[0m  SELECT `tables`.* FROM `tables`
+  [1m[36mPr Load (0.3ms)[0m  [1mSELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 1) LIMIT 1[0m
+  [1m[35mPr Load (0.3ms)[0m  SELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1
+Rendered tables/index.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 73ms (Views: 53.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:16:20 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT `orders`.* FROM `orders`[0m
+Rendered orders/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 33ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tables/1/orders" for 127.0.0.1 at 2010-09-27 18:17:16 +0200
+  Processing by OrdersController#index as HTML
+  Parameters: {"table_id"=>"1"}
+  [1m[35mOrder Load (0.3ms)[0m  SELECT `orders`.* FROM `orders`
+Rendered orders/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 31ms (Views: 16.3ms | ActiveRecord: 0.3ms)

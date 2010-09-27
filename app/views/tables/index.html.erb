@@ -26,6 +26,7 @@
     <td><%= link_to 'Show', table %></td>
     <td><%= link_to 'Edit', edit_table_path(table) %></td>
     <td><%= link_to 'Destroy', table, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Ordini', table_orders_path(table) %></td>
   </tr>
 <% end %>
 </table>
