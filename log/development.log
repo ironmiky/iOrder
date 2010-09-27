@@ -289,3 +289,36 @@ Started GET "/tables" for 127.0.0.1 at 2010-09-27 15:13:02 +0200
   [1m[36mPr Load (0.3ms)[0m  [1mSELECT `prs`.* FROM `prs` WHERE (`prs`.`id` = 2) LIMIT 1[0m
 Rendered tables/index.html.erb within layouts/application (73.9ms)
 Completed 200 OK in 92ms (Views: 78.0ms | ActiveRecord: 0.9ms)
+  [1m[36mSQL (77.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW TABLES
+  [1m[36mSQL (28.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreatePrs (20100927121709)
+Migrating to CreateTables (20100927122950)
+Migrating to CreateOrders (20100927145915)
+  [1m[35mSQL (147.6ms)[0m  CREATE TABLE `orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `order_number` int(11), `table_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (1.2ms)[0m  [1mdescribe `schema_migrations`[0m
+  [1m[35mSQL (39.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100927145915')
+Migrating to CreateCategories (20100927150537)
+  [1m[36mSQL (59.5ms)[0m  [1mCREATE TABLE `categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (28.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100927150537')
+Migrating to CreateProducts (20100927151008)
+  [1m[36mSQL (63.4ms)[0m  [1mCREATE TABLE `products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `content` float, `category_id` int(11), `price` float, `brand` varchar(255), `selling_price` float, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (41.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100927151008')
+Migrating to CreateOrderedProducts (20100927151216)
+  [1m[36mSQL (61.2ms)[0m  [1mCREATE TABLE `ordered_products` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `product_id` int(11), `quantity` int(11), `order_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (27.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20100927151216')
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.0ms)[0m  describe `categories`
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW KEYS FROM `categories`[0m
+  [1m[35mSQL (2.4ms)[0m  describe `ordered_products`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `ordered_products`[0m
+  [1m[35mSQL (1.4ms)[0m  describe `orders`
+  [1m[36mSQL (1.3ms)[0m  [1mSHOW KEYS FROM `orders`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `products`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `products`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `prs`
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `prs`[0m
+  [1m[35mSQL (1.2ms)[0m  describe `tables`
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW KEYS FROM `tables`[0m

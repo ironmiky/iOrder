@@ -1,13 +1,23 @@
 IOrder::Application.routes.draw do
-  resources :products
+  resources :products do
+    resources :ordered_products
+  end
 
-  resources :categories
+  resources :categories do
+    resources :products
+  end
 
-  resources :orders
+  resources :orders do
+    resources :ordered_products
+  end
 
-  resources :tables
+  resources :tables do
+    resources :orders
+  end
 
-  resources :prs
+  resources :prs do
+    resources :tables
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
