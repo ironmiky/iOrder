@@ -1,0 +1,27 @@
+<h1>Listing prs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Cellphone</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prs.each do |pr| %>
+  <tr>
+    <td><%= pr.name %></td>
+    <td><%= pr.cellphone %></td>
+    <td><%= pr.note %></td>
+    <td><%= link_to 'Show', pr %></td>
+    <td><%= link_to 'Edit', edit_pr_path(pr) %></td>
+    <td><%= link_to 'Destroy', pr, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pr', new_pr_path %>

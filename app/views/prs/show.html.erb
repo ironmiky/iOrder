@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @pr.name %>
+</p>
+
+<p>
+  <b>Cellphone:</b>
+  <%= @pr.cellphone %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @pr.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_pr_path(@pr) %> |
+<%= link_to 'Back', prs_path %>

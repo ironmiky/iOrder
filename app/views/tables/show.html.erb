@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @table.number %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @table.name %>
+</p>
+
+<p>
+  <b>People:</b>
+  <%= @table.people %>
+</p>
+
+<p>
+  <b>Free:</b>
+  <%= @table.free %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @table.price %>
+</p>
+
+<p>
+  <b>Pr:</b>
+  <%= @table.pr %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%= @table.note %>
+</p>
+
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>

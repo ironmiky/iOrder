@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  number: 1
+  name: MyString
+  people: 1
+  free: 1
+  price: 1.5
+  pr: 
+  note: MyString
+
+two:
+  number: 1
+  name: MyString
+  people: 1
+  free: 1
+  price: 1.5
+  pr: 
+  note: MyString

@@ -1,0 +1,35 @@
+<h1>Listing tables</h1>
+
+<table>
+  <tr>
+    <th>Number</th>
+    <th>Name</th>
+    <th>People</th>
+    <th>Free</th>
+    <th>Price</th>
+    <th>Pr</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tables.each do |table| %>
+  <tr>
+    <td><%= table.number %></td>
+    <td><%= table.name %></td>
+    <td><%= table.people %></td>
+    <td><%= table.free %></td>
+    <td><%= table.price %></td>
+    <td><%= table.pr %></td>
+    <td><%= table.note %></td>
+    <td><%= link_to 'Show', table %></td>
+    <td><%= link_to 'Edit', edit_table_path(table) %></td>
+    <td><%= link_to 'Destroy', table, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Table', new_table_path %>
