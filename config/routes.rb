@@ -1,4 +1,6 @@
 IOrder::Application.routes.draw do
+  resources :orders
+
   resources :tables
 
   resources :prs

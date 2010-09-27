@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order_number: 1
+  table: 
+
+two:
+  order_number: 1
+  table: 
